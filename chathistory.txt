@@ -1,0 +1,14 @@
+
+01 Aug 0812z ::ffff:77.9.119.36: Hi Sven hast du die Antenne dazu im Keller stehen :-) mfG Rio
+0814z wuestenkaefer: willkommen in meiner tauben welt....
+0814z wuestenkaefer: Kurzwelle unterhalb von 10MHz dagegen geht viel besser
+02 Aug 1223z Gummiadler: Grüsse aus der Hallertau die Station Gummiadler FM 32 der Mike
+03 Aug 0847z DQA980: Grüße von der Frankenhöhe Station Fuchs FM 11 de Werner. Sche wors witter am Sundoch
+10 Aug 1102z :Admin-Sven: Hört mal auf 10150.98lsb rein, da läuft Packet Radio...mit etwas Gedult hört Ihr 300Baud-Packete
+1024z Admin-Sven: Hauskanaele in Nuernberg:
+1025z Admin-Sven: 26825fm , 27085fm , 27275fm
+1026z Admin-Sven: Weitere Kanaele die aktiv sind:
+1039z Admin-Sven: kanäle 4/8/12/14/26/30/32/36
+1113z Admin: Wer Fragen zu diesem WEBSDR hier hat, kann unten auf dieser Seite eine Nachricht an mich schicken.
+1113z Admin: unten Kontaktformular!
+1114z Admin: Es gibt auch eine deutsche Hilfe mit den meistgestellten Fragen am ende dieser Seite 

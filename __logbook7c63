@@ -1,0 +1,110 @@
+WebSDR logbook - note that entries can be made by anyone so correctness is not guaranteed
+--------------------------------------------------------------------------------------------------
+date     UTC    freq   call           comments                        dxcc country        heard by
+--------------------------------------------------------------------------------------------------
+20200731 22:28   27055.1 Journey                                                            wuesti DE,Nuremberg
+20200731 23:14   27055.0 Bonanza    Kanal 8 SSB S9 R5                                       Bajazzo
+20200731 22:32   27055.0 Bayazzo    Hatte qso mit                                           wuestenkaefer
+20200731 23:05   27055.0 Bonanza    S 9 rR 5                                                Bajazzo
+20200731 23:18   27055.0 Journey    Kanal  8 SSB S8 R5                                      Bajazzo
+20200731 23:22   27055.0 mike kilo  Markus   Brombachsee                                    wuestenkaefer
+20200731 23:23   27055.0 Gummistiefel Mechmett    Regensburg                                wuestenkaefer
+20200731 23:23   27055.0 Wiskey Tango 13 Georg   Heilsbronn                                 wuestenkaefer
+20200731 23:24   27055.0 Kakerlake  Andi   Noerdlingen                                      wuestenkaefer
+20200731 23:24   27055.0 Kilo Charly 10 Markus   Kronach                                    wuestenkaefer
+20200731 23:26   27055.0 Wuestenkaefer Nuernberg mitte                                      Bajazzo
+20200802 11:22   27055.0 Waldi      Michael Forchheim                                       Bajazzo
+20200803 22:10   27134.4 Wuestenfuchs hat gesprochen mit                                    Wuestenkaefer
+20200809 08:18   27055.0 spion                                                              ::ffff:185.53.157.203
+20200904 21:21   27055.0 Aurach1    olli                             ! VU  India            Wuestenkaefer
+20200904 21:21   27055.0 Tripple A  Alex                                                    Wuestenkaefer
+20200904 21:22   27055.0 Journey    Gerhard                                                 Wuestenkaefer
+20200904 21:22   27055.0 Muli1      Werner                           ! GU  Guernsey         Wuestenkaefer
+20200904 21:22   27055.0 WT13       Georg                            ! K   United States    Wuestenkaefer
+20200904 21:23   27055.0 Bluesky    Alex                                                    Wuestenkaefer
+20200904 21:23   27055.0 Berry      Roland                                                  Wuestenkaefer
+20200904 21:23   27055.0 Papa Wiskey Johannes                                               Wuestenkaefer
+20200904 21:23   27055.0 Bonanza    Tom                                                     Wuestenkaefer
+20200904 21:24   27055.0 Magnum     Hans                                                    Wuestenkaefer
+20200904 21:24   27055.0 West3      Kevin                              K   United States    Wuestenkaefer
+20200904 21:24   27055.0 Fuchs      Werner                                                  Wuestenkaefer
+20200904 21:24   27055.0 Mambo      Werner                                                  Wuestenkaefer
+20200925 08:05   27262.7 13EK999                                                            ::ffff:62.143.165.120
+20200925 08:06   27262.7 13EK999    hi                                                      ::ffff:62.143.165.120
+20201002 19:24   27055.0 Keiler     wurde geoert von                                        wuestenkaefer
+20201002 19:24   27055.0 Magnum     wurde geoert von                                    Wuestenkaefer                                      
+20201002 19:25   27055.0 Bonanza    wurde geoert von                                        wuestenkaefer
+20201002 19:30   27055.0 West 3     wurde gehoert von                                       wuestenkaefer
+20201002 20:03   27055.0 Pik 1      wurde gehoert von                                       wuestenkaefer
+20201002 20:03   27055.0 Tiger 31   wurde gehoert von                                       wuestenkaefer
+20201009 19:16   27055.3 Penner01   Wie immer alle neben der Frequen ! PA  Netherlands      Roter Baron
+20201107 19:14   27055.0 buchfink1                                   ! BV  Taiwan           ::ffff:88.67.196.56
+20201113 15:36   27055.0 Blue Sky                                                           ::ffff:87.171.191.204
+20201114 18:14   27054.9 Wüstenkäfer                                                      Prinz
+20201114 18:16   27055.0 Pik 1                                                              Prinz
+20201115 10:26   27055.0 Tilly      Eslarn,an der Grenze zu Tschechi                        ::ffff:88.67.222.113
+20201115 14:24   27055.0 U3/1                                        ! UA  European Russia  ::ffff:37.4.231.45
+20201120 14:53   27055.0 Bonanza Thomas                                                     Prinz
+20201120 14:56   27125.0 Bajazzo,Casabl                                                     Prinz
+20201212 21:21   27215.0 Ader09                                        K   United States    ::ffff:84.131.163.229
+20201220 10:47   27055.0 Bonanza :D                                                         la cucaracha
+20201231 17:55   27085.0 13 TH 2039 Vogtland                                                ::ffff:109.41.129.164
+20210101 12:20   27085.0 jumbo-klaus                                                        ::ffff:79.235.197.120
+20210102 19:11   27055.0 Alfons     wei er immer ist xD                                     ::ffff:185.156.174.194
+20210114 18:05   27700.0 29op450    SSTV                                                    Heijopai
+20210114 21:14   27055.0 AAA                                                                Fuchs
+20210114 21:19   27055.0 Bonanza / Ronj                                                     Fuchs
+20210114 21:23   27055.0  Ronja                                                             Fuchs
+20210117 15:04   27085.0 Duc1                                        ! DU  Philippines      ::ffff:62.158.245.140
+20210122 21:51   27057.0 Duc1       Schmalfelden                       DU  Philippines      ::ffff:62.158.245.140
+20210124 10:42   27055.0 bonanza    höre viele stationen,freue mich                        ::ffff:88.67.197.46
+20210131 11:11   27055.0 ronja      schöne runde                                           atlantik
+20210203 23:29   27055.0 Zeus (Klaus)                                                       ::ffff:31.16.252.96
+20210207 09:45   27055.0 alex                                                               ::ffff:88.67.197.46
+20210207 10:13   27055.0 Ronya      Grüsse Aus Radevormwald                                atlantik
+20210207 12:56   27055.0 Charly Wiskey Gruss aus Radevormwald                               atlantik
+20210213 16:06   27084.9 Taxi Driver1                                                       ::ffff:80.228.206.168
+20210213 16:47   27084.6 Taxi Driver                                                        Taxi Driver
+20210220 16:50   27055.0 eismann Grenz�                                                     ::ffff:93.212.19.49
+20210220 16:52   27085.0 eismann                                                            ::ffff:93.212.19.49
+20210220 18:08   27055.0 eismann QTH Wa                                                     ::ffff:93.212.19.49
+20210221 08:40   27055.0 eismann                                                            ::ffff:93.212.16.220
+20210314 10:05   27055.0 Kuca Hans  Gruss xus Radevormwald-NRW                              atlantik
+20210321 09:51   27055.0 Kucha Hans Gruß aus Radeyormwald/NRW                              atlantik
+20210321 11:41   27055.0 RONIA      27055,04 khz. 5-9+40. Modulation                        DELTAECHO
+20210321 11:44   27055.0 Ronia      Modul.- Band B. 110Khz.                                 DELTAECHO
+20210321 11:46   27055.0 Ronia      "73" from JO41WW-Lower Saxony Fr                        DELTAECHO
+20210402 14:36   27057.3 Kleiner Bär                                                       Norbert
+20210402 14:37   27055.2 Kleiner Bär                                                       Norbert/Kleiner Bär
+20210402 14:40   27055.2 Kleiner Bär                                                       Kleiner Bär  Norbert
+20210402 14:48   27055.2 Kleiner Bär Mannhein Seckenheim                                   Kleiner Bär  Norbert
+20210402 14:56   27054.9 Kleiner Bär Mannheim Seckenheim                                   Kleiner Bär  Norbert
+20210402 15:00   27085.0 13 AT 1543                                                         ::ffff:178.201.96.114
+20210402 16:50   27055.2 Kleiner Bär Mannheim Seckenheim  Albrecht                         Kleiner Bär  Norbert
+20210402 16:52   27055.2 Kleiner Bär Ma Seckenheim Allbrecht AE 589                        Kleiner Bär  Norbert
+20210402 16:55   27055.2 Kleiner Bär Ma.Seckenheim Albrecht AE5890                         Kleiner Bär  Norbert
+20210402 16:57   27055.2 Kleiner Bär Ma.Seckenheim Albrecht AE 5890                        Kleiner Bär  Norbert
+20210411 20:10   27265.0 LEO                                                                Leo Neumarkt
+20210411 20:11   27265.0 Airwolf                                                            Leo Neumarkt
+20210411 20:11   27265.0 Leo                                                                Leo Neumarkt
+20210422 20:39   26865.0 Pleitegeier                                                        ::ffff:91.1.186.34
+20210422 20:40   26865.0 Pleitegeier  26865                                                 ::ffff:91.1.186.34
+20210516 11:22   27051.9 Pleitegeier CB-Bayernrunde                                         ::ffff:80.187.97.208
+20210627 09:09   27055.0 13at1978                                                           ::ffff:178.201.96.114
+20210627 12:11  149108.5 14 at 1978                                                         ::ffff:178.201.96.114
+20210704 10:08   27055.0 13 at 1978                                                         ::ffff:178.201.96.114
+20210725 09:53   27665.0 18DCO01    Band von GR na DE ist heute zu.                         18DCO01
+20210801 07:01   27055.0 13 at 1978                                                         ::ffff:178.201.96.114
+20210801 07:02   27055.0 13 at 1978                                                         ::ffff:178.201.96.114
+20210801 07:02   27055.0 13 at 2033                                                         ::ffff:178.201.96.114
+20210815 07:56   27055.0 13 At 1978                                                         ::ffff:178.201.96.114
+20210815 07:56   27055.0 13 AT 1978                                                         ::ffff:178.201.96.114
+20210815 07:57   27085.0 13 AT 1978                                                         ::ffff:178.201.96.114
+20210820 20:58   27085.0 14AT1789                                                           ::ffff:178.201.96.114
+20210820 21:06   27085.0 13at1978                                                           ::ffff:178.201.96.114
+20210820 21:06   27085.0 555                                                                ::ffff:178.201.96.114
+20211016 20:45   27255.0 TexasRanger                                                        ::ffff:62.158.249.127
+20211017 09:57   27055.0 kucha Hans GRUSS AUS Radevormwald                                  atlantik
+20211126 19:08   27334.9 Speedy     Hi an alle                                              Speedy Forchheim
+20211217 00:08   27085.0 test       hallo                                                   Sven
+20211225 07:16   27555.1 123                                                                ::ffff:95.117.85.168

@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<!-- TODO: put a nice title in the next line -->
+<title>Wüstis SDR Nuernberg/JN59NK</title>
+
+Dies ist eine automatische Uebersetzung der Seite <a href="http://www.websdr.org/faq.html" target="_blank">http://www.websdr.org/faq.html</a>
+
+Haeufig gestellte Fragen zum WebSDR-Projekt
+Verwenden des WebSDR (clientseitig)
+
+Ich hoere keinen Ton. Woher?
+    Neben offensichtlichen Problemen wie der Stummschaltung des Sound Ihres Computers ist eine moegliche Ursache, dass Ihr Webbrowser dies nicht unterstuetzt. Es gibt zwei voellig unterschiedliche Techniken, um den Sound abzuspielen. Ihr Computer muss (mindestens) einen von ihnen unterstuetzen, damit der Sound funktioniert:
+
+        Heutzutage am haeufigsten verwendet: HTML5 WebAudio, da dies in den meisten Webbrowsern seit mehreren Jahren verfuegbar ist:
+            Firefox Version 17 oder hoeher
+            Chrome Version 10 oder hoeher
+            Safari Version 6 oder hoeher
+            Opera Version 15 oder hoeher
+            Edge (wie im Lieferumfang von Windows 10 enthalten)
+        Leider unterstuetzt Internet Explorer diese Technologie noch nicht.
+
+        Im Wesentlichen nur fuer Internet Explorer koennen Sie auch Java-Applets verwenden. Dazu benoetigen Sie nicht nur einen Webbrowser, sondern auch Version 1.4.2 oder eine neuere Version von Java, die auf Ihrem Computer ausgefuehrt wird. Versuchen Sie http://javatester.org/version.html herauszufinden, ob Sie Java haben und um welche Version es sich handelt. Moeglicherweise muessen Sie Java-Applets pro Site aktivieren. siehe hier. Einige WebSDR-Sites haben die Java-Unterstuetzung deaktiviert. Diese Websites koennen nur mit HTML5 WebAudio verwendet werden.
+
+    Also, welches benutzt du? WebSDR-Sites versuchen zu erkennen, was Ihr Browser kann. Wenn HTML5 WebAudio verfuegbar ist, wird es verwendet. Andernfalls wird Java ausprobiert.
+Ich verwende Chrome und hoere kein Audio (auf einigen Websites)!
+    Seit Version 71 erlaubt Chrome nicht jeder Website, Audio abzuspielen, um laestige Werbung zu stoppen. Chrome versucht zu erraten, ob Sie Audio moechten oder nicht, macht es aber nicht immer richtig. Auf einigen WebSDR-Sites erhalten Sie eine Schaltflaeche "Audio-Start", auf einigen nicht.
+
+    Wenn Sie kein Audio erhalten, versuchen Sie Folgendes:
+
+        Klicken Sie oben rechts auf die 4 vertikalen Punkte und dann auf Einstellungen.
+        Klicken Sie unten auf Erweitert.
+        Klicken Sie unter "Datenschutz und Sicherheit" auf Site-Einstellungen.
+        Waehlen Sie "Sound"
+        Waehlen Sie "Hinzufuegen" und geben Sie "http: // *" ein.
+
+    (danke an K9GL fuer diese Anleitung)
+
+    Beachten Sie, dass das oben Gesagte die "Autoplay" -Richtlinie von Chrome fuer alle http-Sites effektiv deaktiviert.
+    Obwohl es eine gute Idee ist, den automatischen Sound von Werbung zu stoppen, halte ich die Autoplay-Richtlinie von Chrome fuer grundlegend falsch. Anstatt zu erraten, was der Benutzer moechte, sollte der Browser den Benutzer einfach fragen, ob er zulassen moechte, dass die Seite Ton wiedergibt (und dies natuerlich fuer spaetere Besuche beachten).
+Nur einige WebSDR-Sites funktionieren. bei anderen bekomme ich keinen Ton und keinen Wasserfall.
+    Bitte schauen Sie sich genauer an, welche Websites funktionieren und welche nicht. Ist es so, dass nur diejenigen an "ungewoehnlichen" Ports (d. H. Diejenigen, deren URL eine Nummer wie 8901 enthaelt) funktionieren, waehrend diejenigen ohne Portnummer (die auf dem Standard-Webserver-Port 80 ausgefuehrt werden) nicht funktionieren? Oder umgekehrt?
+
+    Wenn nur die auf Port 80 funktionieren, befinden Sie sich wahrscheinlich hinter einer Firewall, die nur Port 80 (und einige andere) zulaesst. Dies ist haeufig in oeffentlichen WiFi-Netzwerken und Bueronetzwerken der Fall.
+
+    Wenn nur die an anderen Ports als 80 funktionieren, befinden Sie sich wahrscheinlich hinter einem Webproxyserver, der nicht weiss, wie er mit den (nicht standardmaessigen) Audio- und Wasserfalldatenstroemen umgehen soll. Der Proxyserver befindet sich moeglicherweise auch im Netzwerk Ihres Internetdienstanbieters.
+Kann ich das WebSDR auf einem Smartphone / Tablet / etc. Verwenden?
+    Ja, wenn es einen Browser fuer Ihr Geraet gibt, der HTML5 WebAudio unterstuetzt.
+
+    Auf Android-Geraeten gehoeren dazu Firefox, Chrome und Opera (jedoch nicht Opera-Mini). und sogar neuere Versionen des in Android integrierten Browsers sollten funktionieren.
+
+    Auf iPhones, iPads usw. koennen Sie den integrierten Safari-Browser verwenden, jedoch nur, wenn Sie ueber iOS Version 6 oder hoeher verfuegen.
+Ich benutze ein iPhone / iPad und hoere kein Audio!
+    Ein Problem bei iPad-aehnlichen Geraeten besteht darin, dass sie ueber zwei Stummschaltschalter verfuegen: einen, der sich auf Musik, Youtube usw. auswirkt, und einen, der sich auf Systemtoene auswirkt (z. B. Pieptoene bei E-Mail-Benachrichtigungen).
+    Irgendwie behandelt iOS das WebSDR-Audio als letzteres. ueberpruefen Sie daher bitte, ob Sie die Systemgeraeusche nicht versehentlich stummgeschaltet haben. Bei einigen Geraeten handelt es sich um einen Software-Switch, bei anderen um einen physischen Hardware-Switch.
+Wie kann ich digitale Signale wie PSK31, RTTY usw. dekodieren?
+    Sie muessen das empfangene Audio von der WebSDR-Webseite einem separaten Programm zufuehren, das diese Signale decodieren kann. Dies kann so einfach erfolgen, indem Sie ein Mikrofon vor den Lautsprecher des Computers stellen oder Software wie Virtual Audio Cable unter Windows verwenden. Siehe zum Beispiel http://www.oz9aec.net/index.php/component/content/article/63-sdr/290-fun-with-websdr-and-fldigi und http://www.hamradioandvision.com/websdr -digital-Modi /.
+Kann ich DRM-Signale ("digital radio mondiale") dekodieren?
+    Nein. Diese Signale sind 9 oder 10 kHz breit, was viel mehr ist als die Bandbreite, die vom WebSDR-Server zu den Clients gestreamt wird.
+    Das Dekodieren auf der Serverseite ist aufgrund der CPU-Auslastung des Servers ebenfalls keine Option.
+    Darueber hinaus denke ich, dass die meisten DRM-Programme auch direkt auf dem Sender zu hoeren sind
+	
+	</html>

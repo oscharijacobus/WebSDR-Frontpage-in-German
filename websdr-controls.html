@@ -1,0 +1,387 @@
+<form name="usernameform" action="#">
+<script type="text/javascript">
+document_username();
+</script>
+<input type="text" size=1 name="dummytopreventsubmissiononenter" style="display:none" onclick="">
+</form>
+
+<div id="dummyforie"></div>
+<a href="m.html">
+<div id="mobilewarning" class="warning" style="min-height:45px; text-align:center; vertical-align:middle;">
+Es sieht so aus, als wenn du ein mobiles Gerät benutzt; klicke hier um auf die mobilseite zu kommen.
+</div>
+</a>
+<div id="javawarning" class="warning">
+Anscheinend ist Java auf Ihrem Computer nicht installiert oder deaktiviert. Sie müssen es installieren und/oder aktivieren, damit diese Website ordnungsgemäß funktioniert.
+<br>Seit der Java-Version 7u51 muss Java für jede Website separat aktiviert werden; siehe <a href=http://websdr.org/java.html target="_blank">http://websdr.org/java.html</a> für Anweisungen.
+</div>
+<div id="html5warning" class="warning">
+Ihr Browser scheint HTML5 WebAudio nicht zu unterstützen; Bitte versuchen Sie es mit einer aktuellen Version von Firefox, Chrome, Opera oder Safari; oder wechseln Sie zu Java.
+
+
+</div>
+
+<hr>
+
+<form name="viewform" action="#">
+<div class="ctl">
+  <b>Ansicht:</b>
+  <span id="viewformbuttons"></span>
+</div>
+<div class="ctl">
+  <b>Erlaube Tastatur:</b>
+  <input type="checkbox" name="allowkeys" value="">
+  <div class="keylist">
+  <tt><b>j k &larr; &rarr;</b></tt>: freq down/up (+shift/ctrl/alt faster)
+  <br>
+  <tt><b>u l c a f</b></tt>: USB, LSB, CW, AM, FM
+  <br>
+  <tt><b>z Z</b></tt>: center/zoom wasserfall 
+  <br>
+  <tt><b>g</b></tt>: enter frequency
+  </div>
+</div>
+</form>
+
+<form name="html5choiceform" action="#" style="float:right">
+<div class="ctl">
+<div id=html5choice>
+</div>
+</div>
+<br style="clear:both">
+</form>
+
+<div style="position:relative" class=clear>
+<div id="test">
+</div>
+<div id="waterfalls">
+</div>
+<div class="hideblind">
+ <img src="edgelower.png" title="drag to change filter" id="edgelower" onmousedown="mousedownlower(event)" class="scaleabs" alt="">
+ <img src="edgeupper.png" title="drag to change filter" id="edgeupper" onmousedown="mousedownupper(event)" class="scaleabs" alt="">
+ <div id="yellowbara">
+  <div id="yellowbar" title="drag to tune" class="scaleabs" style="position:absolute;width:100px;height:18px;background-color:transparent" onmousedown="mousedownpassband(event)">
+   <div id="yellowbarr" class="scaleabs" style="position:relative;left:0px;">
+    <div class="scaleabs" style="position:absolute;width:0px;height:0px;"></div>
+   </div>
+  </div>
+  <img src="carrier.png" title="drag to tune" id="carrier" onmousedown="mousedownpassband(event)" class="scaleabs" style="z-index:2" alt="">
+ </div>
+</div>
+</div>
+
+<br>
+
+<form name="freqform" action="#" onsubmit="setfreqif(this.frequency.value); return false;">
+
+<div class="ctl">
+<center><b><script type="text/javascript"> document_bandbuttons(); </script></b>
+<!--<br>  10=rtl2332u 15=V3    20=V3    30=V3   40/60=RSP 80=V3  -->
+<br>
+  <b><font size="5">Freq.:</b>
+
+  <span class="showblind">
+  <input id="freqstepm3" type="button" value="---" onclick="freqstep(-3)">
+  <input type="button" value="--" onclick="freqstep(-2)">
+  <input type="button" value="-" onclick="freqstep(-1)">
+  </span>
+ 
+ 
+ <input type="number" action="#" title="type in your frequency in kHz &amp; hit enter" step="0.01" style="font-size:32px; text-align:center; background:#99ffcc; font-family: inherit; width: 175px;" size="3" name="frequency" onchange="setfreqif_fut(this.value);">
+ <b>kHz</font></b>
+ 
+ <!--.&nbsp;&nbsp;VFO:</font>kommt bald</b>
+ -->
+ 
+ <!-- <input type="text" size=10 name="frequency" onkeyup="setfreqif_fut(this.value);"> kHz
+  -->
+ 
+
+ <input type="submit" style="position:absolute; left:-999px" value="submit">  <!-- IE sillyness; other browsers are fine with visibility:none -->
+  <span class="hideblind">
+  <br>
+  <input type="button" value="---" onclick="freqstep(-3)">
+  <input type="button" value="--" onclick="freqstep(-2)">
+  <input type="button" value="-" onclick="freqstep(-1)">
+  </span>
+  <input type="button" value="+" onclick="freqstep(+1)">
+  <input type="button" value="++" onclick="freqstep(+2)">
+  <input type="button" value="+++" onclick="freqstep(+3)">
+  
+   <br>
+  <b>Filter: </b>
+ 
+  <b><span id="numericalbandwidth6">?</span></b> kHz @ -6dB;
+  <b><span id="numericalbandwidth60">?</span></b> kHz @ -60dB.
+  <br>
+  <b>Modulationsart:</b>
+  <table><center>
+    <tr>
+    <td><input type="button" value="CW"		onclick="setmf ('cw', -0.85, -0.65);"></td>
+    <td><input type="button" value="LSB"	onclick="setmf('lsb', -2.7, -0.3);"></td>
+    <td><input type="button" value="USB"	onclick="setmf('usb',  0.3,  2.7);"></td>
+    <td><input type="button" value="AM"		onclick="setmf ('am',  -4  ,  4  );"></td>
+    <td><input type="button" value="FM"		onclick="setmf ('fm',  -5  ,  5  );"></td>
+	</tr>
+	</table>
+	<b>Filtergroesse:</b>
+	<table>
+	<tr>
+    <td><input type="button" value="CWw"	onclick="setmf ('cw', -0.95, -0.55);"></td>
+    <td><input type="button" value="LSBw"	onclick="setmf('lsb', -4.5, -0.1);"></td>
+    <td><input type="button" value="USBw"	onclick="setmf('usb',  0.1,  4.5);"></td>
+    <td><input type="button" value="AMw"	onclick="setmf ('am', -7,  7);"></td>
+	<td><input type="button" value="FMw"		onclick="setmf ('fm',  -8  ,  8  );"></td>
+	</tr>
+	</table>
+	<table>
+	<tr>
+    <td><input type="button" value="CWn"	onclick="setmf('cw',-0.78, -0.72);"></td>
+    <td><input type="button" value="LSBn"	onclick="setmf('lsb', -2.2, -0.5);"></td>
+    <td><input type="button" value="USBn"	onclick="setmf('usb',  0.5,  2.2);"></td>
+    <td><input type="button" value="AMn"	onclick="setmf ('am', -2.5,  2.5);"></td>
+	<td><input type="button" value="FMn"	onclick="setmf ('fm', -3,  3);"></td>
+    </tr>
+	</table>
+	<table>
+	<tr>
+    <td><input type="button" value="-1,0"	onclick="lo+=0.5; hi-=0.5; updbw();"></td>
+	<td><input type="button" value="-0,5"	onclick="lo+=0.25; hi-=0.25; updbw();"></td>
+	<td><input type="button" value="-0,1"	onclick="lo+=0.05; hi-=0.05; updbw();"></td>
+	<td><input type="button" value="+0,1"	onclick="lo-=0.05; hi+=0.05; updbw();"></td>
+	<td><input type="button" value="+0,5"	onclick="lo-=0.25; hi+=0.25; updbw();"></td>
+	<td><input type="button" value="+1,0"	onclick="lo-=0.5; hi+=0.5; updbw();"></td>
+	</tr>
+  	</table>
+  <span class="hideblind">
+  <span style="font-size:65%">Oder die Ecken vom Kanalfilter in der Frequenzskala bewegen</span>
+  </span>
+  
+  
+  
+  
+  <div class="hideblind">
+  <br>
+  <span style="font-size:65%">Oder mit klicken/ablegen/Mausraddrehen auf der Frequenzskala einstellen.</span>
+  <br>
+  <hr>
+  <b>Speicher:</b>
+  <div id="memories" class="memories"></div>
+  </div>
+</div>
+</form>
+
+<!-- <div class="ctl">
+  <b>Filter: </b>
+  <br>
+  <b><span id="numericalbandwidth6">?</span></b> kHz @ -6dB;
+  <b><span id="numericalbandwidth60">?</span></b> kHz @ -60dB.
+  <br>
+  <b>Modulationsart:</b>
+  <table>
+    <tr>
+    
+    <td><input type="button" value="CW"		onclick="setmf ('cw', -0.85, -0.65);"></td>
+    <td><input type="button" value="LSB"	onclick="setmf('lsb', -2.7, -0.3);"></td>
+    <td><input type="button" value="USB"	onclick="setmf('usb',  0.3,  2.7);"></td>
+    <td><input type="button" value="AM"		onclick="setmf ('am',  -4  ,  4  );"></td>
+    <td><input type="button" value="FM"		onclick="setmf ('fm',  -5  ,  5  );"></td>
+	</tr>
+	</table>
+	<b>Filtergroesse:</b>
+	<table>
+	<tr>
+    <td><input type="button" value="wide"	onclick="lo-=0.03125; hi+=0.03125; updbw();"></td>
+    <td><input type="button" value="CWw"	onclick="setmf ('cw', -0.95, -0.55);"></td>
+    <td><input type="button" value="LSBw"	onclick="setmf('lsb', -4.5, -0.1);"></td>
+    <td><input type="button" value="USBw"	onclick="setmf('usb',  0.1,  4.5);"></td>
+    <td><input type="button" value="AMw"	onclick="setmf ('am', -7,  7);"></td>
+	<td><input type="button" value="FMw"		onclick="setmf ('fm',  -8  ,  8  );"></td>
+	</tr><tr>
+    <td><input type="button" value="narw"	onclick="lo+=0.03125; hi-=0.03125; updbw();"></td>
+    <td><input type="button" value="CWn"	onclick="setmf('cw',-0.78, -0.72);"></td>
+    <td><input type="button" value="LSBn"	onclick="setmf('lsb', -2.2, -0.5);"></td>
+    <td><input type="button" value="USBn"	onclick="setmf('usb',  0.5,  2.2);"></td>
+    <td><input type="button" value="AMn"	onclick="setmf ('am', -2.5,  2.5);"></td>
+	<td><input type="button" value="FMn"	onclick="setmf ('fm', -3,  3);"></td>
+    </tr>
+  	</table>
+  <span class="hideblind">
+  <span style="font-size:65%">Or drag the passband edges on the frequency scale.</span>
+  </span>
+</div> -->
+
+<div class="hideblind">
+<div class="ctl">
+  <b>Wasserfall Ansicht:</b>
+  <br>
+  <table>
+    <tr>
+    <td>
+    <center><span title="zoom out one step"><input type="button" value="Verkleinern" onclick="wfset(1);"></span>
+    <span title="zoom in one step"><input type="button" value="Vergrößern" onclick="wfset(0);"></span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <center><span title="view entire frequency range of this receiver"><input type="button" value="Ganzes Band" onclick="wfset(4);"></span>
+    <span title="zoom in as deep as possible"><input type="button" value="Maximal Vergrößern" onclick="wfset(2);"></span>
+	</td>
+    </tr>
+    <tr>
+    <td>
+	<center><span title="Bringe das Empfangssignal in die Mitte des Wasserfalls"><input type="button" value="wasserfall zentrieren" onclick="wfset(3);">
+      
+  <br>
+        <span style="font-size:85%">oder Mausrad über <br> dem Wasserfall drehen.</span>
+  
+  <hr>
+  </span>
+	
+    </td>
+    </tr>
+    <tr><td>
+     <tr><td>
+    Geschwindigkeit:
+    <select id="wfspeed" onchange="waterfallspeed(this.value)">
+      <option value="4">Langsam</option>
+      <option value="2">Mittel</option>
+      <option value="1">Schnell</option>
+    </select>
+    <br>
+    Größe:
+    <select id="wfsize" onchange="waterfallheight(this.value)">
+      <option value="50">Klein</option>
+      <option selected value="100">Mittel</option>
+      <option value="200">Groß</option>
+    </select>
+    <br>
+    Anzeige:
+    <select id="wfmode" onchange="waterfallmode(this.value)">
+      <option value="0">Spektrum</option>
+      <option selected value="1">Wasserfall</option>
+      <option value="2">Schwache signale</option>
+      <option value="3">Starke Signale</option>
+    </select>
+    </td></tr>
+    <tr><td>
+<script type="text/javascript"> if (dxinfoavailable) document.write('<input type="checkbox" name="hidedx" value="" onclick="sethidedx(this.checked)">Markierungen verstecken '); </script>
+<br>
+<iframe src="http://free.timeanddate.com/clock/i7e98flu/n316/tlde3/fn2/tc9fc/pc9fc/bas2/ta1" frameborder="0" width="116" height="23"></iframe>
+<iframe src="http://free.timeanddate.com/clock/i7e98flu/tlde3/fn2/tc9fc/pc9fc/bas2/ts1/ta1" frameborder="0" width="85" height="23"></iframe>
+
+
+    </td></tr>
+  </table>
+</div>
+</div>
+
+
+
+<div class="ctl">
+  <div class="hideblind">
+    <div style="width:250px;background-color:black;">
+    <br>
+    <div id="smeterpeak" style="width:100px;height:4px;background-color:#ff8000;position:absolute;">
+      <div style="position:absolute;width:0px;height:0px;"></div>
+    </div>
+    <div id="smeterbar" style="width:100px;height:4px;background-color:#00ff00;position:absolute;">
+      <div style="position:absolute;width:0px;height:0px;"></div>
+    </div>
+    <br>
+    <img src="smeter1.png" alt="[scale]">
+    <br>
+    </div>
+  </div>
+  <span id="numericalsmeter">?</span> dB;
+  Spitze
+  <span id="numericalsmeterpeak">?</span> dB;
+  Durchschnitt
+  <br>
+  <input id="mutecheckbox" title="disable sound" type="checkbox" value="" onclick="setmute(this.checked)">Stumm
+  <input id="squelchcheckbox" title="Rauschen blockieren" type="checkbox" value="" onclick="setsquelch(this.checked)">Rauschsperre
+  <input id="autonotchcheckbox" title="Automatisches ausfiltern von Pfeifftöhnen" type="checkbox" value="" onclick="setautonotch(this.checked)">Kerbfilter
+  <br>
+  <span id="volumecontrol" style="white-space:nowrap; width:50%">
+    Lautstärke:
+    <input type="range" min="-20" max="6" id="volumecontrol2" name="volume" value="0" step="1"
+    oninput="soundapplet.setvolume(Math.pow(10,this.value/10.))"
+    onchange="soundapplet.setvolume(Math.pow(10,this.value/10.))">
+  </span>
+  <div id="record_span" style="display:none">
+    <hr>
+    <b>Audio Aufnahme: </b>
+    <button id="recbutton" onclick="record_click(); return false">Beginn</button>
+    <span id="reccontrol"></span>
+    <br>
+    <div id="recwarning" style="width:300px; display:none; font-size:-1; color:red">Vermutlich kann dein Browser nicht aufzeichnen; Bitte versuche einen anderen Weltweiten Netzbetrachter (Browser) Opera Chrome Firefox Ironbrowser EdgeBrowser Internet Explorer .</div>
+  </div>
+  <hr>
+    <b>Signalstärke Profil:</b>
+    <select id="sgraphchoice">
+      <option value=0>Kein</option>
+      <option value=1>Schnell</option>
+      <option value=10>Langsam</option>
+    </select>
+  <div>
+    <canvas id="sgraph" style="width:100%; display:none;"></canvas>
+  </div>
+</div>
+
+<div class="ctl">
+  <b>Logbuch:</b>
+  <form name="logform" action="#">
+  Rufzeichen das gehört wird: <input type="text" size=12 name="call" onclick="">
+  <br>
+  Zusätzliche Kommentare <input type="text" size=30 name="comment" onclick="">
+  <input type="button" value="Senden" onclick="return sendlog()">
+  </form>
+  <span style="font-size:80%">
+    Anmerkung: Zeit, Frequenz, dein Name/Rufzeichen werden automatisch hinzugefügt.
+    <br>
+    Betrachte die <a href="~~logbook?nr=20" target="_blank">letzten 20 Zeilen des Logbuches</a>,
+    oder das <a href="logbook.txt" target="_blank">Gesamte Logbuch </a> 
+  </span>
+</div>
+
+<br style="clear:both">
+<hr>
+
+
+<form name="form1" action="#">
+Dieses WebSDR wird aktuell von <span id=numusers>?</span> Benutzer simultan benutzt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input id="compactviewcheckbox" type="checkbox" name="compactview" value="" onclick="setcompactview(this.checked)">Kompakte Darstellung
+<br>
+<div id=users></div>
+</form>
+<hr>
+
+<div id="chatboxspan">
+<p><b>Unterhaltungsfenster:</b><br>
+<span style="font-size:80%">
+Dieses Benachrichtigungsfenster soll die Funktionsweise des WebSDR erläutern.
+<br>
+Die Betreiber dieser Website lehnen jede Verantwortung für Text ab, der in dieser Chatbox angezeigt wird.
+<br>
+Benutzer die sich nicht an die allgemeinen Benimmregeln halten, werden ausgeschlossen!
+</span>
+<div id="chatboxnew" style="background-color:#0B615E; overflow:auto; height:250px; width:100%; font-family: monospace"></div>
+<br>
+<form name="chatform" onsubmit="return sendchat()" action="#">
+<input type="text" size=80 name="chat" onclick="">
+<input type="button" value="chatbox submit" onclick="return sendchat()">
+</form>
+<br>
+Ausgewählte Unterhaltungen sind <a href="chathistory.txt" target="_blank">hier</a> gespeichert
+<br>
+<hr>
+<center>
+Mehr Informationen über das Web-SDR Projekt findest du unter <a href="http://www.websdr.org" target="_blank">http://www.websdr.org</a>.
+<a href=websdr-java-info.html target="blank">Java Info</a>
+</center>
+
+Hilfe zu diesem Typ WEBSDR : Auf <a href="http://www.websdr.org/faq.html" target="_blank">Englisch</a> , und auf <a href="german-faq.html" target="_blank">Deutsch</a>
+, allerdings maschinell Übersetzt.(Wird aber in Zukunft mal nachbearbeitet)
+<br>
+</div>
+
