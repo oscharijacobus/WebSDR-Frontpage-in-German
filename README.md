@@ -1,4 +1,4 @@
-- 👋 Hi, I’m Oschari Jacobus
+- 👋 Hi, I’m Oschari
 - 👀 I’m interested in Open Source supported Software.
 - 🌱 I’m always learning new stuff
 - 💞️ I’m looking to collaborate on WebSDR Surface , configs and drivers like http://websdr.org/
